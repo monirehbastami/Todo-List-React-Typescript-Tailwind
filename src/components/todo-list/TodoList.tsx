@@ -24,12 +24,12 @@ const TodoList: React.FunctionComponent<TodoListProps> = ({todo,key,completeTodo
 
     return ( 
         <>
-        <div className='bg-mlightblue py-2 w-72 flex flex-row justify-start text-lg items-baseline gap-3' key={key}>
+        <div className='bg-mlightblue py-2 w-72 flex flex-row justify-start text-lg items-baseline gap-3 md:placeholder:text-2xl md:text-3xl md:py-6 md:w-7/12' key={key}>
         {todo.completed ? (
-                <div className='mx-2 w-4 h-4 text-pink-400' onClick={todoDelete}><AiFillMinusCircle  /></div>
+                <div className='mx-2 text-pink-400 md:text-4xl md:mx-4' onClick={todoDelete}><AiFillMinusCircle  /></div>
                 
                 ): (
-                <div onClick={todoCompleted}className='rounded-full ring-2 ring-mpink mx-2 w-4 h-4'></div>
+                <div onClick={todoCompleted}className='rounded-full ring-2 ring-mpink mx-2 w-4 h-4  md:w-8 md:h-8 md:mx-4' ></div>
             
                 )}
             <h1> {todo.completed ? (

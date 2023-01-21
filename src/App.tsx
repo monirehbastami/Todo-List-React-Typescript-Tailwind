@@ -41,11 +41,11 @@ function App() {
   }
 
   return (
-    <div className='flex w-full justify-center items-center w-50 h-50 flex-col gap-4 text-white'>
-      <div className='p-10 text-3xl'>What's up, Momo!</div>
+    <div className='flex w-full justify-center items-center sm:w-50 sm:h-50 md:w-100 md:h-100 flex-col gap-4 text-white'>
+      <div className='p-10 text-3xl md:text-6xl'>What's up, Momo!</div>
       
       <TodoForm addTodo={addTodo}/>
-      <div className='font-mono text-xs font-thin'>TODAY'S TASKS</div>
+      <div className='font-mono text-xs font-thin md:text-3xl'>TODAY'S TASKS</div>
       {
         todoList.map((todo:ITodo,key:number)=>(
           <TodoList todo={todo} key={key} completeTodo={completeTodo} deleteTodo={deleteTodo}/>
